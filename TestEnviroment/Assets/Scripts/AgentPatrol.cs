@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -49,9 +48,12 @@ public class AgentPatrol : MonoBehaviour
 
         waitTime = Random.Range(waitTimeMin, waitTimeMax);
 
+        //i
         targetIndex = (targetIndex + 1) % targets.Length;
 
+        //animation
         animator.SetBool("Walking", true);
+
         agent.SetDestination(targets[targetIndex].position);
     }
 }
